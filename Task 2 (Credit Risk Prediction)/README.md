@@ -1,26 +1,30 @@
-# Task 4 - Predicting Insurance Claim Amounts
+# Task 2 - Credit Risk Prediction
 
 ## Objective
-The objective of this project is to predict medical insurance charges using machine learning regression techniques based on personal information such as age, BMI, smoking habits, and region.
+The objective of this project is to predict whether a loan applicant is likely to get loan approval using machine learning classification techniques.
 
 ---
 
 # Dataset Information
 
 Dataset Used:
-- Medical Cost Personal Dataset
+- Loan Prediction Dataset
 
 Features:
-- age
-- sex
-- bmi
-- children
-- smoker
-- region
-- charges
+- Gender
+- Married
+- Dependents
+- Education
+- Self_Employed
+- ApplicantIncome
+- CoapplicantIncome
+- LoanAmount
+- Loan_Amount_Term
+- Credit_History
+- Property_Area
 
 Target Variable:
-- charges
+- Loan_Status
 
 ---
 
@@ -29,6 +33,7 @@ Target Variable:
 - Python
 - Jupyter Notebook
 - Pandas
+- NumPy
 - Matplotlib
 - Seaborn
 - Scikit-learn
@@ -39,58 +44,58 @@ Target Variable:
 
 ## 1. Data Loading
 - Loaded dataset using pandas
-- Displayed dataset structure using:
-  - `.shape`
-  - `.columns`
-  - `.head()`
+- Displayed first 5 rows using `.head()`
 
-## 2. Data Inspection
-- Checked dataset information
-- Generated statistical summary
+## 2. Data Understanding
+- Checked dataset shape
+- Displayed column names
+- Used `.info()` and `.describe()`
+
+## 3. Data Cleaning
 - Checked missing values
+- Filled missing categorical values using mode
+- Filled missing numerical values using median
 
-## 3. Data Visualization
+## 4. Data Visualization
 Created:
-- BMI vs Charges Scatter Plot
-- Age vs Charges Scatter Plot
-- Smoking Status vs Charges Box Plot
+- Loan Amount Distribution
+- Education vs Loan Status
+- Applicant Income Distribution
 
-## 4. Data Preprocessing
+## 5. Data Preprocessing
 - Encoded categorical columns using Label Encoding
 
-## 5. Model Training
-- Trained Linear Regression model
+## 6. Model Training
+- Trained Logistic Regression model
 
-## 6. Model Evaluation
+## 7. Model Evaluation
 Evaluated model using:
-- MAE (Mean Absolute Error)
-- RMSE (Root Mean Squared Error)
+- Accuracy Score
+- Confusion Matrix
 
 ---
 
 # Results
 
-MAE:
-- 4186.50
-
-RMSE:
-- 5799.58
+Accuracy:
+- 78%
 
 ---
 
 # Key Observations
 
-- Smokers have significantly higher insurance charges.
-- Insurance charges increase with age and BMI.
-- Smoking status is one of the strongest factors affecting insurance cost.
+- Most applicants applied for medium loan amounts.
+- Graduates received more loan approvals.
+- Income and loan amount affected loan approval status.
 
 ---
 
 # Conclusion
 
-The project successfully predicted insurance charges using Linear Regression. Different visualization techniques helped identify relationships between personal factors and insurance costs. The model achieved reasonable prediction accuracy using regression techniques.
+The project successfully predicted loan approval using Logistic Regression. Data preprocessing, visualization, and classification techniques were applied effectively. The model achieved good accuracy on testing data.
 
 ---
 
 # Author
+
 Mubashir Azeem Abbasi
